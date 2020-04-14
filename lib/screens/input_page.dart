@@ -1,3 +1,4 @@
+import 'package:bmicalculator/components/bottom_button.dart';
 import 'package:bmicalculator/components/icon_content.dart';
 import 'package:bmicalculator/components/reusable_card.dart';
 import 'package:flutter/material.dart';
@@ -65,6 +66,7 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
+          BottomButton(buttonTitle: 'CALCULATE', onTap: () {}),
         ],
       ),
     );
