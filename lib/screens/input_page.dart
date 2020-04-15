@@ -20,6 +20,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
   int height = 180;
+  int weight = 60;
 
   @override
   Widget build(BuildContext context) {
@@ -134,7 +135,7 @@ class _InputPageState extends State<InputPage> {
                           style: kLabelTextStyle,
                         ),
                         Text(
-                          '60',
+                          weight.toString(),
                           style: kNumberTextStyle,
                         ),
                         Row(
@@ -142,12 +143,20 @@ class _InputPageState extends State<InputPage> {
                           children: <Widget>[
                             RoundIconButton(
                               icon: FontAwesomeIcons.minus,
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  weight -= 1;
+                                });
+                              },
                             ),
                             SizedBox(width: 10.0),
                             RoundIconButton(
                               icon: FontAwesomeIcons.plus,
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  weight += 1;
+                                });
+                              },
                             ),
                           ],
                         )
