@@ -1,6 +1,7 @@
 import 'package:bmicalculator/components/bottom_button.dart';
 import 'package:bmicalculator/components/icon_content.dart';
 import 'package:bmicalculator/components/reusable_card.dart';
+import 'package:bmicalculator/components/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -138,7 +139,17 @@ class _InputPageState extends State<InputPage> {
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[],
+                          children: <Widget>[
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.minus,
+                              onPressed: () {},
+                            ),
+                            SizedBox(width: 10.0),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.plus,
+                              onPressed: () {},
+                            ),
+                          ],
                         )
                       ],
                     ),
