@@ -13,8 +13,24 @@ class ResultsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-      title: Text('BMI CALCULATOR'),
-    ));
+      appBar: AppBar(
+        title: Text('BMI CALCULATOR'),
+      ),
+      body: Column(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.all(15.0),
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              'Your Result',
+              style: TextStyle(
+                fontSize: 50.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
