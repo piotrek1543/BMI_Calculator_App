@@ -1,4 +1,8 @@
+import 'package:bmicalculator/components/bottom_button.dart';
+import 'package:bmicalculator/components/reusable_card.dart';
 import 'package:flutter/material.dart';
+
+import '../constants.dart';
 
 class ResultsPage extends StatelessWidget {
   ResultsPage(
@@ -18,16 +22,26 @@ class ResultsPage extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.all(15.0),
-            alignment: Alignment.bottomLeft,
-            child: Text(
-              'Your Result',
-              style: TextStyle(
-                fontSize: 50.0,
-                fontWeight: FontWeight.bold,
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.all(15.0),
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                'Your Result',
+                style: kTitleTextStyle,
               ),
             ),
+          ),
+          Expanded(
+            child: ReusableCard(
+              color: kActiveCardColor,
+            ),
+          ),
+          BottomButton(
+            buttonTitle: 'RE-CALCULATE',
+            onTap: () {
+              Navigator.pop(context);
+            },
           ),
         ],
       ),
