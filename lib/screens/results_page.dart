@@ -33,8 +33,37 @@ class ResultsPage extends StatelessWidget {
             ),
           ),
           Expanded(
+            flex: 5,
             child: ReusableCard(
               color: kActiveCardColor,
+              cardChild: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    resultText.toUpperCase(),
+                    style: TextStyle(
+                      color: Color(0xFF24D876),
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    bmiResult,
+                    style: TextStyle(
+                      fontSize: 100.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    interpretation,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 22.0,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           BottomButton(
