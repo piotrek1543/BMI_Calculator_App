@@ -8,10 +8,12 @@ const kInactiveTrackColor = Color(0xFF8D8E98);
 const kActiveTrackColor = Colors.white;
 const kThumbColor = Color(0xFFEB1555);
 const kOverlayColor = Color(0x29EB1555);
+const kResultTextColor = Color(0xFF24D876);
+const kLabelTextColor = Color(0xFF8D8E98);
 
 const kLabelTextStyle = TextStyle(
   fontSize: 18.0,
-  color: Color(0xFF8D8E98),
+  color: kLabelTextColor,
 );
 
 const kLargeButtonTextStyle = TextStyle(
@@ -27,4 +29,19 @@ const kTitleTextStyle = TextStyle(
 const kNumberTextStyle = TextStyle(
   fontSize: 50.0,
   fontWeight: FontWeight.w900,
+);
+
+const kResultTextStyle = TextStyle(
+  color: kResultTextColor,
+  fontSize: 22.0,
+  fontWeight: FontWeight.bold,
+);
+
+const kBMITextStyle = TextStyle(
+  fontSize: 100.0,
+  fontWeight: FontWeight.bold,
+);
+
+const kBodyTextStyle = TextStyle(
+  fontSize: 22.0,
 );

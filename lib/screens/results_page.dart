@@ -42,25 +42,16 @@ class ResultsPage extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     resultText.toUpperCase(),
-                    style: TextStyle(
-                      color: Color(0xFF24D876),
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: kResultTextStyle,
                   ),
                   Text(
                     bmiResult,
-                    style: TextStyle(
-                      fontSize: 100.0,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: kBMITextStyle,
                   ),
                   Text(
                     interpretation,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 22.0,
-                    ),
+                    style: kBodyTextStyle,
                   ),
                 ],
               ),
