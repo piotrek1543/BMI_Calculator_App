@@ -12,7 +12,7 @@ const kResultTextColor = Color(0xFF24D876);
 const kLabelTextColor = Color(0xFF8D8E98);
 
 const kAppBarTextStyle = TextStyle(
-  fontFamily: 'NunitoBold',
+  fontFamily: 'Nunito',
 );
 
 const kLabelTextStyle = TextStyle(
