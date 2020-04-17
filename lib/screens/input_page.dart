@@ -20,7 +20,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Gender selectedGender;
+  Gender selectedGender = Gender.male;
   int height = 180;
   int weight = 60;
   int age = 20;
@@ -38,6 +38,7 @@ class _InputPageState extends State<InputPage> {
         ),
       ),
       body: new SingleChildScrollView(
+        padding: EdgeInsets.only(bottom: 16.0),
         child: Column(
           children: <Widget>[
             Padding(
@@ -161,6 +162,7 @@ class _InputPageState extends State<InputPage> {
                             weight.toString(),
                             style: kNumberTextStyle,
                           ),
+                          SizedBox(height: 10.0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
@@ -201,6 +203,7 @@ class _InputPageState extends State<InputPage> {
                             age.toString(),
                             style: kNumberTextStyle,
                           ),
+                          SizedBox(height: 10.0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[

@@ -23,50 +23,82 @@ class ResultsPage extends StatelessWidget {
           style: kAppBarTextStyle,
         ),
       ),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              padding: EdgeInsets.all(15.0),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(16.0),
               alignment: Alignment.bottomLeft,
-              child: Text(
-                'Your Result',
-                style: kTitleTextStyle,
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 8.0),
+                child: Text(
+                  'Your Result',
+                  style: kTitleTextStyle,
+                ),
               ),
             ),
-          ),
-          Expanded(
-            flex: 5,
-            child: ReusableCard(
-              color: kActiveCardColor,
-              cardChild: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    resultText.toUpperCase(),
-                    style: kResultTextStyle,
+            Padding(
+              padding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 32.0),
+              child: ReusableCard(
+                color: kActiveCardColor,
+                cardChild: Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        resultText.toUpperCase(),
+                        style: kResultTextStyle,
+                      ),
+                      Text(
+                        bmiResult,
+                        style: kBMITextStyle,
+                      ),
+                      Text(
+                        'Normal BMI range:',
+                        style: kLabelTextStyle.copyWith(
+                          fontSize: 20.0,
+                          fontFamily: 'NunitoSemiBold',
+                        ),
+                      ),
+                      SizedBox(height: 4.0),
+                      Text('18,5 - 25 kg/m2',
+                          style: kNumberTextStyle.copyWith(
+                            fontSize: 20.0,
+                            fontFamily: 'NunitoSemiBold',
+                          )),
+                      SizedBox(height: 32.0),
+                      Text(
+                        interpretation,
+                        textAlign: TextAlign.center,
+                        style: kBodyTextStyle,
+                      ),
+                      SizedBox(height: 32.0),
+                      FlatButton(
+                        color: kSaveButtonBackgroundColor,
+                        padding: EdgeInsets.fromLTRB(50.0, 20.0, 50.0, 20.0),
+                        child: Text('SAVE RESULT',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w800,
+                                letterSpacing: 1.2,
+                                fontFamily: 'Nunito')),
+                        onPressed: () {},
+                      )
+                    ],
                   ),
-                  Text(
-                    bmiResult,
-                    style: kBMITextStyle,
-                  ),
-                  Text(
-                    interpretation,
-                    textAlign: TextAlign.center,
-                    style: kBodyTextStyle,
-                  ),
-                ],
+                ),
               ),
             ),
-          ),
-          BottomButton(
-            buttonTitle: 'RE-CALCULATE',
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-        ],
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomButton(
+        buttonTitle: 'RE-CALCULATE',
+        onTap: () {
+          Navigator.pop(context);
+        },
       ),
     );
   }
