@@ -72,3 +72,28 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: fonts/Nunito-Regular.ttf
+    - family: NunitoBlack
+      fonts:
+        - asset: fonts/Nunito-Black.ttf
+    - family: NunitoLight
+      fonts:
+        - asset: fonts/Nunito-Light.ttf
+    - family: NunitoSemiBold
+      fonts:
+        - asset: fonts/Nunito-SemiBold.ttf
+    - family: NunitoBold
+      fonts:
+        - asset: fonts/Nunito-Bold.ttf
+    - family: NunitoExtraBold
+      fonts:
+        - asset: fonts/Nunito-ExtraBold.ttf
+    - family: NunitoExtraLight
+      fonts:
+        - asset: fonts/Nunito-ExtraLight.ttf
+
+

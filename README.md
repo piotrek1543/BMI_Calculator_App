@@ -1,6 +1,6 @@
 # BMI Calculator
 
-<img height=500 src="readme-assets/flutter-bmi-calculator.png" alt="BMI Calculator Screenshot">
+<img height=500 src="readme_assets/flutter-bmi-calculator.png" alt="BMI Calculator Screenshot">
 
 A Body Mass Index Calculator inspired by the beautiful designs made by [Ruben Vaalt](https://dribbble.com/shots/4585382-Simple-BMI-Calculator).
 

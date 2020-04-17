@@ -11,24 +11,33 @@ const kOverlayColor = Color(0x29EB1555);
 const kResultTextColor = Color(0xFF24D876);
 const kLabelTextColor = Color(0xFF8D8E98);
 
+const kAppBarTextStyle = TextStyle(
+  fontFamily: 'NunitoBold',
+);
+
 const kLabelTextStyle = TextStyle(
   fontSize: 18.0,
   color: kLabelTextColor,
+  fontFamily: 'NunitoBold',
 );
 
 const kLargeButtonTextStyle = TextStyle(
-  fontSize: 25.0,
+  fontSize: 18.0,
+  letterSpacing: 2.0,
   fontWeight: FontWeight.bold,
+  fontFamily: 'NunitoSemiBold',
 );
 
 const kTitleTextStyle = TextStyle(
   fontSize: 50.0,
   fontWeight: FontWeight.bold,
+  fontFamily: 'Nunito',
 );
 
 const kNumberTextStyle = TextStyle(
   fontSize: 50.0,
   fontWeight: FontWeight.w900,
+  fontFamily: 'NunitoExtraBold',
 );
 
 const kResultTextStyle = TextStyle(
