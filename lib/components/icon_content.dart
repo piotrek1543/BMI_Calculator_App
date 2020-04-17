@@ -2,10 +2,11 @@ import 'package:bmicalculator/constants.dart';
 import 'package:flutter/material.dart';
 
 class IconContent extends StatelessWidget {
-  IconContent({this.icon, this.label});
+  IconContent({this.icon, this.label, this.labelColor});
 
   final IconData icon;
   final String label;
+  final Color labelColor;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class IconContent extends StatelessWidget {
         ),
         Text(
           label,
-          style: kLabelTextStyle,
+          style: kLabelTextStyle.copyWith(color: labelColor),
         )
       ],
     );
